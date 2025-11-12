@@ -1,0 +1,27 @@
+FROM python:3.11-slim
+
+WORKDIR /workspace
+
+# 시스템 의존성
+RUN apt-get update && apt-get install -y \
+    gcc \
+    g++ \
+    libglib2.0-0 \
+    libsm6 \
+    libxext6 \
+    libxrender-dev \
+    libgomp1 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Python 의존성 설치
+COPY requirements.txt requirements-dev.txt ./
+RUN pip install --no-cache-dir -r requirements-dev.txt
+
+# vscode 사용자 생성 (Dev Container용)
+RUN useradd -m -s /bin/bash vscode && \
+    chown -R vscode:vscode /workspace
+
+# vscode 사용자로 전환
+USER vscode
+
+# CMD는 docker-compose.dev.yml에서 override됨

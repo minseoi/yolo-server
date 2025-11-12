@@ -95,9 +95,9 @@ server_study/
 ```
 
 **체크리스트**:
-- [ ] 모든 디렉토리 생성 (`mkdir -p`)
-- [ ] 각 Python 패키지에 `__init__.py` 생성
-- [ ] `.gitkeep` 파일로 빈 디렉토리 유지 (models/, uploads/, outputs/)
+- [x] 모든 디렉토리 생성 (`mkdir -p`)
+- [x] 각 Python 패키지에 `__init__.py` 생성
+- [x] `.gitkeep` 파일로 빈 디렉토리 유지 (models/, uploads/, outputs/)
 
 ---
 
@@ -135,7 +135,7 @@ server_study/
 ```
 
 **체크리스트**:
-- [ ] `devcontainer.json` 생성
+- [x] `devcontainer.json` 생성
 - [ ] VSCode Dev Containers 확장 설치
 - [ ] Docker Desktop 설치 및 실행 확인
 
@@ -206,9 +206,9 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload
 ```
 
 **체크리스트**:
-- [ ] `docker-compose.dev.yml` 생성
-- [ ] `Dockerfile.dev` 생성
-- [ ] MySQL 서비스 선택사항 확인
+- [x] `docker-compose.dev.yml` 생성
+- [x] `Dockerfile.dev` 생성
+- [x] MySQL 서비스 선택사항 확인
 
 ---
 
@@ -254,8 +254,8 @@ mypy==1.8.0
 ```
 
 **체크리스트**:
-- [ ] `requirements.txt` 생성
-- [ ] `requirements-dev.txt` 생성
+- [x] `requirements.txt` 생성
+- [x] `requirements-dev.txt` 생성
 
 ---
 
@@ -327,9 +327,9 @@ LOG_LEVEL=INFO
 ```
 
 **체크리스트**:
-- [ ] `app/core/config.py` 구현
-- [ ] `.env.example` 생성
-- [ ] `.env` 파일 생성 (`.gitignore`에 추가)
+- [x] `app/core/config.py` 구현
+- [x] `.env.example` 생성
+- [x] `.env` 파일 생성 (`.gitignore`에 추가)
 
 ---
 
@@ -388,8 +388,8 @@ def get_logger(name: str) -> logging.Logger:
 ```
 
 **체크리스트**:
-- [ ] `app/utils/logger.py` 구현
-- [ ] `logs/` 디렉토리 `.gitignore`에 추가
+- [x] `app/utils/logger.py` 구현
+- [x] `logs/` 디렉토리 `.gitignore`에 추가
 - [ ] JSON 로그 형식 테스트
 
 ---
@@ -488,9 +488,9 @@ async def health_check():
 ```
 
 **체크리스트**:
-- [ ] `app/main.py` 구현
-- [ ] `app/api/routes/__init__.py` 생성
-- [ ] `app/api/routes/health.py` 구현
+- [x] `app/main.py` 구현
+- [x] `app/api/routes/__init__.py` 생성
+- [x] `app/api/routes/health.py` 구현
 - [ ] `/health` 엔드포인트 테스트
 
 ---
@@ -521,7 +521,7 @@ async def health_check():
 ```
 
 **체크리스트**:
-- [ ] `.vscode/launch.json` 생성
+- [x] `.vscode/launch.json` 생성
 - [ ] F5로 디버거 실행 테스트
 - [ ] 브레이크포인트 동작 확인
 
@@ -570,7 +570,7 @@ Thumbs.db
 ```
 
 **체크리스트**:
-- [ ] `.gitignore` 생성
+- [x] `.gitignore` 생성
 - [ ] Git 초기화 (`git init`)
 - [ ] 첫 커밋 생성
 
