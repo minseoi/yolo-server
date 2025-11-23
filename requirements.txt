@@ -6,9 +6,9 @@ pydantic-settings==2.1.0
 python-dotenv==1.0.0
 
 # YOLO & Vision
-ultralytics==8.0.220
-opencv-python-headless==4.8.1.78
-numpy==1.24.3
+ultralytics>=8.0.220
+opencv-python-headless>=4.8.1.78
+numpy>=1.26.0
 
 # Database (optional)
 sqlalchemy==2.0.23

@@ -6,7 +6,8 @@ import uuid
 
 from app.core.config import settings
 from app.utils.logger import get_logger
-from app.api.routes import health
+from app.api.routes import health, detection
+from app.core.yolo_model import YOLOModelManager
 
 logger = get_logger(__name__)
 
@@ -16,10 +17,14 @@ async def lifespan(app: FastAPI):
     """앱 시작/종료 시 실행"""
     logger.info(f"Starting {settings.APP_NAME} v{settings.APP_VERSION}")
 
-    # 모델 로드는 Phase 2에서 구현
-    # from app.core.yolo_model import YOLOModelManager
-    # model_manager = YOLOModelManager()
-    # model_manager.load_model(settings.MODEL_PATH)
+    # YOLO 모델 로드 (시작 시 한 번만)
+    try:
+        model_manager = YOLOModelManager()
+        model_manager.load_model(settings.MODEL_PATH)
+        logger.info("YOLO model loaded successfully")
+    except Exception as e:
+        logger.error(f"Failed to load YOLO model: {e}")
+        raise
 
     yield
 
@@ -34,6 +39,7 @@ app = FastAPI(
 
 # 라우터 등록
 app.include_router(health.router)
+app.include_router(detection.router)
 
 
 @app.exception_handler(Exception)
