@@ -229,3 +229,4 @@ logs/
 *credentials*
 config/production.yml
 config/secrets.yml
+claudedocs/DEPLOYMENT.md

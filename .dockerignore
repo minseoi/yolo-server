@@ -1,0 +1,72 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Docker
+.dockerignore
+Dockerfile
+docker-compose*.yml
+.docker/
+
+# DevContainer
+.devcontainer/
+
+# Environment files
+.env
+.env.*
+
+# YOLO models (will be downloaded)
+models/*.pt
+yolov8n.pt
+
+# Data directories
+uploads/
+outputs/
+logs/
+
+# Test files
+test_*.py
+tests/
+claudedocs/testImage/
+test_image.jpg
+
+# Documentation
+*.md
+docs/
+claudedocs/
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.log
